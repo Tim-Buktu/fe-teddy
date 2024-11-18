@@ -22,7 +22,7 @@ export default function SignUp() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3001/api/login", {
+      const response = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export default function SignUp() {
               Login
             </h2>
             <p className="text-gray-200 lg:text-gray-600">
-              Don&apost have an account?{" "}
+              Dont have an account?{" "}
               <Link
                 href="/sign-up"
                 className="font-medium text-emerald-300 hover:text-emerald-400 lg:text-emerald-600 lg:hover:text-emerald-700"

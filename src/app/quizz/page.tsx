@@ -154,9 +154,7 @@ export default function Component() {
 
     const fetchStatus = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:3001/api/state?token=${token}`
-        );
+        const response = await fetch(`/api/state?token=${token}`);
         if (!response.ok) throw new Error("Failed to fetch status");
         const data = await response.json();
 
@@ -184,7 +182,7 @@ export default function Component() {
     const token = window.localStorage.getItem("token");
     const updateStatus = async () => {
       try {
-        await fetch(`http://localhost:3001/api/state?token=${token}`, {
+        await fetch(`/api/state?token=${token}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -404,7 +402,7 @@ export default function Component() {
           onClick={() => setGameStarted(true)}
           className="w-full max-w-md bg-[#8B4513] hover:bg-[#A0522D] text-white text-lg py-6 rounded-full"
         >
-          Let&aposs Play
+          Lets Play
         </Button>
 
         <Button onClick={handleSignOut}>Sign Out</Button>
