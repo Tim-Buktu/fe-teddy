@@ -2,8 +2,8 @@ import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 import { logger }from 'hono/logger'
 import { cors } from "hono/cors";
-import { decode, sign, verify } from "hono/jwt";
-import * as bcrypt from "bcrypt";
+// import { decode, sign, verify } from "hono/jwt";
+// import * as bcrypt from "bcrypt";
 
 export const runtime = 'edge'
 
